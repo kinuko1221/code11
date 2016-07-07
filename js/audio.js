@@ -68,6 +68,32 @@ function bindClickHandler(selector, handler){
   elm.addEventListener("click", handler);
 }
 
+function changeToMusic02(){
+    var audio = document.querySelector("audio");
+    audio.src = "audio/audio02.mp3";
+    audio.play();
+    }
+  var play02 = document.querySelector("#play02");
+  play02.addEventListener("click", changeToMusic02)
+  
+  function changeToMusic01(){
+    var audio = document.querySelector("audio");
+    audio.src = "audio/audio01.mp3";
+    audio.play();
+    }
+  var play01 = document.querySelector("#play01");
+  play01.addEventListener("click", changeToMusic01)
+  
+  function changeMusic(){
+    var audio = document.querySelector("audio");
+    audio.src = music;
+    audio.play();
+    }
+  var play01 = document.querySelector("#play01");
+  play01.addEventListener("click", changeToMusic01)
+
+
+
 bindClickHandler("[data-role=play]", play);
 bindClickHandler("[data-role=pause]", pause);
 bindClickHandler("#skip10sec", skip10sec);
